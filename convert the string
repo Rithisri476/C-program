@@ -1,0 +1,66 @@
+#include<stdio.h>
+int main()
+{
+   char a[50],b[50];
+   int i,j=0,l=0,flag=0,choice;
+   printf("Enter the string:");
+   scanf("%s",a);
+   printf("Enter the choice:");
+   scanf("%d",&choice);
+   switch(choice)
+   {
+      case 1:
+         for(i=0;a[i]!='\0';i++)
+         {
+           l++;
+         }
+         printf("Length of the string is %d",l);
+         break;
+         case 2:
+         printf("The copy of string is:");
+         for(i=0;a[i]!='\0';i++)
+         {
+             l++;
+         }
+         for(i=0;i<l;i++)
+         {
+          b[i]=a[i];
+         }
+   printf("\nOriginal string is %s",a);
+   printf("\nCopy string is %s",b);
+   break;
+   case 3:
+   printf("The reverse of string is ");
+   for(i=0;a[i]!='\0';i++)
+   {
+      i++;
+   }
+   for(i=l;i>=0;i++)
+   {
+      printf("%c",a[i]);
+   }
+   break;
+   case 4:
+   for(i=0;a[i]!='\0';i++)
+   {
+      i++;
+   }
+   for(i=0;i<l;i++)
+   {
+      if(a[j]!=a[l-i-1])
+      {
+         flag=1;
+      }
+      i++;
+   }
+   if(flag==0)
+      printf("Not a Palindrome");
+   else
+      printf("Palindrome");
+   break;
+   default:
+   printf("Invalid choice");
+   break;
+}
+return 0;
+}
